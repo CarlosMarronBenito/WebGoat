@@ -107,6 +107,9 @@
   <properties>
     <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     <skipTests>true</skipTests>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.organization>TU_ORG</sonar.organization>
+    <sonar.projectKey>TU_PROJECT_KEY</sonar.projectKey>
     <!-- Shared properties with plugins and version numbers across submodules-->
     <asciidoctorj.version>2.5.3</asciidoctorj.version>
     <bootstrap.version>3.3.7</bootstrap.version>
