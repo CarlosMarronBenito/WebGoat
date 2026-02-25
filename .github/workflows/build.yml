@@ -20,11 +20,8 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Build & Analyze (force SonarCloud)
+      - name: Build & Analyze (SonarCloud)
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: mvn -B -DskipTests verify sonar:sonar \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.organization=carlosmarronbenito \
-          -Dsonar.projectKey=CarlosMarronBenito_WebGoat
+        run: mvn -B -DskipTests verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=carlosmarronbenito -Dsonar.projectKey=CarlosMarronBenito_WebGoat
